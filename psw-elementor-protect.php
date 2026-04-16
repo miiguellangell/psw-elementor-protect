@@ -428,8 +428,8 @@ class PSW_Elementor_Protect {
 		?>
 		<div id="psw-ep-overlay" role="dialog" aria-modal="true" aria-labelledby="psw-ep-title">
 			<div id="psw-ep-modal">
-				<h2 id="psw-ep-title"><?php esc_html_e( 'Contenido protegido', 'psw-elementor-protect' ); ?></h2>
-				<p><?php esc_html_e( 'Ingresa la contraseña para acceder a este contenido.', 'psw-elementor-protect' ); ?></p>
+				<h2 id="psw-ep-title">🔐 <?php esc_html_e( 'Contenido exclusivo', 'psw-elementor-protect' ); ?></h2>
+				<p><?php esc_html_e( 'Este perfil es privado.', 'psw-elementor-protect' ); ?><br><?php esc_html_e( 'Solicita tu acceso para desbloquear la experiencia', 'psw-elementor-protect' ); ?> 💎</p>
 				<form id="psw-ep-form" novalidate>
 					<div class="psw-ep-field">
 						<label for="psw-ep-input" class="psw-ep-sr-only">
