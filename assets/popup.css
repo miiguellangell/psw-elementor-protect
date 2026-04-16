@@ -1,0 +1,138 @@
+/* ============================================================
+   PSW Elementor Protect — Popup Styles
+   ============================================================ */
+
+/* Bloquea el scroll del body mientras el popup está activo */
+body.psw-ep-locked {
+	overflow: hidden;
+}
+
+/* Overlay que cubre toda la pantalla */
+#psw-ep-overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.75);
+	z-index: 999999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Barlow", sans-serif;
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+}
+
+/* Modal centrado */
+#psw-ep-modal {
+	background: #ffffff;
+	border-radius: 8px;
+	padding: 40px 36px;
+	max-width: 440px;
+	width: 90%;
+	text-align: center;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+	animation: psw-ep-fade-in 0.3s ease;
+}
+
+@keyframes psw-ep-fade-in {
+	from {
+		opacity: 0;
+		transform: translateY(-16px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+#psw-ep-modal h2 {
+	font-family: "Barlow", sans-serif;
+	font-size: 22px;
+	font-weight: 600;
+	margin: 0 0 10px;
+	color: #1a1a1a;
+}
+
+#psw-ep-modal > p {
+	font-family: "Barlow", sans-serif;
+	font-size: 15px;
+	color: #666666;
+	margin: 0 0 24px;
+	line-height: 1.5;
+}
+
+/* Campo de contraseña */
+.psw-ep-field {
+	margin-bottom: 12px;
+}
+
+#psw-ep-input {
+	width: 100%;
+	padding: 13px 16px;
+	font-family: "Barlow", sans-serif;
+	font-size: 16px;
+	color: #333333;
+	background: #f9f9f9;
+	border: 1.5px solid #dddddd;
+	border-radius: 5px 5px 5px 5px;
+	box-sizing: border-box;
+	outline: none;
+	transition: border-color 0.2s, background 0.2s;
+}
+
+#psw-ep-input:focus {
+	border-color: #555555;
+	background: #ffffff;
+}
+
+/* Mensaje de error */
+#psw-ep-error {
+	color: #e53e3e;
+	font-family: "Barlow", sans-serif;
+	font-size: 14px;
+	min-height: 22px;
+	margin: 0 0 8px;
+	line-height: 1.4;
+}
+
+/* Botón — hereda los estilos de Elementor del usuario */
+#psw-ep-submit {
+	background-color: var(--e-global-color-c45b781, #333333);
+	font-family: "Barlow", sans-serif;
+	font-size: 19px;
+	font-weight: 400;
+	fill: #ffffff;
+	color: #ffffff;
+	border: none;
+	border-radius: 5px 5px 5px 5px;
+	padding: 15px 15px 15px 15px;
+	width: 100%;
+	cursor: pointer;
+	transition: opacity 0.2s, transform 0.1s;
+	line-height: 1;
+}
+
+#psw-ep-submit:hover:not(:disabled) {
+	opacity: 0.88;
+}
+
+#psw-ep-submit:active:not(:disabled) {
+	transform: scale(0.98);
+}
+
+#psw-ep-submit:disabled {
+	opacity: 0.55;
+	cursor: not-allowed;
+}
+
+/* Texto solo para lectores de pantalla */
+.psw-ep-sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
